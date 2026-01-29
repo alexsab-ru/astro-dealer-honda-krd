@@ -1,8 +1,22 @@
 ---
 import settings from '@/data/settings.json';
 import Layout from '@/layouts/Layout.astro';
+import PageH1 from '@/components/PageH1/Index.astro';
 ---
 
 <Layout title={`Honda под заказ: от мечты до ключей!`} description={`Принимаем Ваши заявки по программе «Honda под заказ». У нас большой выбор моделей, выгода до 20% и 3 года защиты от поломок!`}>
-	123
+	
+	<section class="bg-accent-500 text-white pb-0! xl:py-0!">
+		<div class="container px-0">
+			<div class="grid lg:grid-cols-2 gap-5 sm:gap-10 items-center">
+				<div class="px-5 flex flex-col gap-5">
+					<PageH1 h1=`Honda под заказ: <br/>от мечты до ключей!` classes="h1 fz-3 leading-none" />
+					<p class="xl:text-xl">Принимаем Ваши заявки по программе «Honda под заказ». <br/>У нас большой выбор моделей, выгода до 20% и 3 года защиты от поломок!<sup>*</sup></p>
+					<a href="#order" class="scroll-link btn white self-start">Отправить заявку</a>
+				</div>
+				<img src="https://cdn.alexsab.ru/pages/honda/pod-zakaz/top-cars.webp" alt="" class="mt-auto" loading="lazy">
+			</div>
+		</div>
+	</section>
+
 </Layout>
