@@ -4,11 +4,21 @@ import Layout from '@/layouts/Layout.astro';
 import PageH1 from '@/components/PageH1/Index.astro';
 import SectionWithBg from '@/components/SectionWithBg/SectionWithBg.astro';
 import AdvantagesList from '@/components/Advantages/List.astro';
+import AdvantagesItem from '@/components/Advantages/Item.astro';
 const advantages = [ 
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: 'Белая схема:', text: 'Мы гарантируем юридическую чистоту, безопасность и прозрачность сделки. Без скрытых комиссий и навязанных услуг.'},
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: 'Полный пакет:', text: 'Поиск автомобиля, общение с поставщиками, подготовку документов, прохождение экспортных процедур и доставку мы возьмем на себя.'},
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: '*Защита от неприятностей:', text: 'Вы получаете 3 года или 100 000 км защиты от поломок на приобретенный новый автомобиль. Для автомобилей с пробегом –1 год или 30 000 км.'},
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: 'Послепродажная поддержка:', text: 'Вам будет доступно квалифицированное обслуживание и склад запасных частей. Ждем вас в официальных сервисах компании Honda.'}
+];
+const steps = [ 
+    {iconName: 'mdi:numeric-1-circle', iconClass: 'text-accent-400!', title: 'ВЫБОР', text: 'Выбрать желаемую модель а/м и версию на сайте или у дилера'},
+    {iconName: 'mdi:numeric-2-circle', iconClass: 'text-accent-400!', title: 'ПОДБОРКА', text: 'Выбрать автомобиль из предложенных вариантов'},
+    {iconName: 'mdi:numeric-3-circle', iconClass: 'text-accent-400!', title: 'ДОГОВОР И ДЕПОЗИТ', text: 'Заключить с дилером агентский Договор. Депозит для брони а/м'},
+    {iconName: 'mdi:numeric-4-circle', iconClass: 'text-accent-400!', title: 'ПРИОБРЕТЕНИЕ', text: 'Подписать Договор на покупку и оплатить автомобиль'},
+    {iconName: 'mdi:numeric-5-circle', iconClass: 'text-accent-400!', title: 'ПРИЯТНОЕ ОЖИДАНИЕ', text: 'Автомобиль в пути. Примерно 1 месяц'},
+    {iconName: 'mdi:numeric-6-circle', iconClass: 'text-accent-400!', title: 'ТАМОЖЕННОЕ ОФОРМЛЕНИЕ', text: 'Подписание документов. Оплата таможенных сборов и услуг агента'},
+    {iconName: 'mdi:numeric-7-circle', iconClass: 'text-accent-400!', title: 'КЛЮЧИ', text: 'Теперь вы можете забрать свой автомобиль у дилера'},
 ];
 ---
 
@@ -34,7 +44,7 @@ const advantages = [
 		</div>
 	</section>
 
-	<SectionWithBg image={{desktop: 'https://cdn.alexsab.ru/pages/honda/pod-zakaz/bg.webp'}} fixed classes='py-32!'>
+	<SectionWithBg image={{desktop: 'https://cdn.alexsab.ru/pages/honda/pod-zakaz/bg-2.webp'}} fixed classes='py-32!'>
 		<div class="container">
 			<div class="max-w-[465px] text-left">
 				<h2 class="p-0! before:hidden! text-left! w-full! mb-5">Спокойствие и приятные хлопоты</h2>
@@ -42,5 +52,17 @@ const advantages = [
 			</div>
 		</div>
 	</SectionWithBg>
+
+	<section class="">
+		<div class="container">
+			<h2 class="">Порядок заказа автомобиля</h2>
+			<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-10 text-center mt-14">
+				{steps.map(item => <AdvantagesItem item={item} classes="bg-[#000000]/90 py-6 lg:py-10 px-5 flex flex-col items-center *:text-white"/> )}
+				<div class="text-center py-6 lg:py-10 px-5">
+					<img src="https://cdn.alexsab.ru/pages/honda/pod-zakaz/keys.webp" class="h-[100px] lg:h-[150px] mx-auto" alt="Keys">
+				</div>
+			</div>
+		</div>
+	</section>
 
 </Layout>
