@@ -2,6 +2,476 @@
 import PageLayout from '@/layouts/PageLayout.astro';
 import settings from '@/data/settings.json';
 const { site_name, brand, legal_entity, legal_inn, legal_city, phone_common, email_common } = settings;
+const items = [
+    {
+        "name": "CR-V",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/crv.png",
+        "links": [
+            {
+                "title": "Руководство по эксплуатации CR-V 2019",
+                "size": "110.48 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/68b/68b006faa673db3149c73b34cb82e2df.pdf"
+            },
+            {
+                "title": "Руководство по навигации CR-V'2019",
+                "size": "77.02 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/610/61041e11d2b5d8c5167ea08391f12153.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2017-2020) обновлённый",
+                "size": "2.59 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/f73/f73e2cbd23f395636f4f34ce00b3908d.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2015) обновленный",
+                "size": "304.02 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/a7d/a7dd0b5af7b409d6f3ec12f8e37d127e.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2013) обновленный",
+                "size": "302.74 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/9ad/9ad347afa91cb83b426c1b98947e564f.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2010) обновленный",
+                "size": "302.15 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/022/0226fcfdebec9a2021ca1339012f6a4e.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2007) обновленный",
+                "size": "301.47 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/df6/df6c9e30c04c10d657f656b22258dd3b.pdf"
+            },
+            {
+                "title": "Регламент ТО (CR-V 2002) обновленный",
+                "size": "293.22 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/ed8/ed85f615eda04b3f8a57fea79bfcef0e.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (CR-V 2017)",
+                "size": "97.06 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/858/858f4132ba9240c3ebb4381736bc48b4.pdf"
+            },
+            {
+                "title": "Руководство по навигации (CR-V 2017)",
+                "size": "77.06 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/dea/dea28095fe75c703c5753a142d025650.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (CR-V 2015 2.4)",
+                "size": "40.03 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/a38/a38fef578c8a750df260fca817ae2db4.pdf"
+            },
+            {
+                "title": "Руководство по навигации (CR-V 2015 2.4)",
+                "size": "13.21 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/27e/27ec0e89fb40188b7b57234033ffa40f.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (CR-V 2015 2.0)",
+                "size": "12.6 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/3c8/3c87b57d4bf8d2586f743c5a78f2242b.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (CR-V 2013)",
+                "size": "166.04 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/8cb/8cbea0ffd09df3d5b962d3efcfb40185.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (CR-V 2010)",
+                "size": "25.45 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/cd2/cd221f063ada30de541fa5872338a04a.pdf"
+            },
+            {
+                "title": "Краткое руководство по пользованию A-DA для iPhone",
+                "size": "624.38 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/339/339b73586b6a97b7b3ebf0110b182338.pdf"
+            }
+        ]
+    },
+    {
+        "name": "PILOT",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/pilot.png",
+        "links": [
+            {
+                "title": "Руководство по эксплуатации PILOT 2019",
+                "size": "194.94 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/c0d/c0daa3f649b0f203f4344c5c0dfce5dc.pdf"
+            },
+            {
+                "title": "Руководство по навигации PILOT 2019",
+                "size": "58.99 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/2fe/2fe6451796146ab0d6e89eee3b21bede.pdf"
+            },
+            {
+                "title": "Регламент ТО (PILOT 2016-2020) обновлённый",
+                "size": "410.76 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/66e/66e383547c869c39a7d46e32a133aa6c.pdf"
+            },
+            {
+                "title": "Регламент ТО (Pilot 2008,2012) обновленный",
+                "size": "297.25 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/826/8267e710851c5fee19655bda6de3752b.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Pilot 2016)",
+                "size": "175.41 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/32a/32a8d6c43f0ad9b57cffd4136fd137b2.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Pilot 2008, 2012)",
+                "size": "17.28 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/fe3/fe3fd1c8c4d7393daa9fc0ee8eae1fc7.pdf"
+            },
+            {
+                "title": "Руководство по навигации (Pilot 2016)",
+                "size": "74.65 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/9e4/9e48ed22923a64a5ea5ff51438420737.pdf"
+            }
+        ]
+    },
+    {
+        "name": "CIVIC 4D",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/civic-4d.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Civic 4D 2012) обновленный",
+                "size": "291.34 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/8f6/8f605963aaa91b60b4a219d417020b46.pdf"
+            },
+            {
+                "title": "Регламент ТО (Civic 4D 2009) обновленный",
+                "size": "293.01 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/8dd/8dd6215590fca4072b4ab057606ab61d.pdf"
+            },
+            {
+                "title": "Регламент ТО (Civic 4D 2006) обновленный",
+                "size": "293.47 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/b3b/b3bcdf410ccdd9042c6d1262dc0b2844.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Civic 4D 2012)",
+                "size": "120.36 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/0f6/0f6066659e8c633faf95b710e1cd99aa.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Civic 4D)",
+                "size": "4.56 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/9ed/9ed2181339b5e62991ffbbcec9d9b86e.pdf"
+            },
+            {
+                "title": "Руководство по навигации i-SHIFT",
+                "size": "0 Б",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "name": "CIVIC 5D",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/civic-5d.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Civic 5D 2012) обновленный",
+                "size": "291.28 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/d5a/d5aca9e76baeeb3987cc62dd9c4def4d.pdf"
+            },
+            {
+                "title": "Регламент ТО (Civic 5D 2009) обновленный",
+                "size": "293.14 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/f78/f788c426111e8c57332d9604e9cb9b62.pdf"
+            },
+            {
+                "title": "Регламент ТО (Civic 5D 2006) обновленный",
+                "size": "288.74 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/edf/edf873c0ec9b3c26ab1c22edf4f383b0.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Civic 5D 2012)",
+                "size": "150.03 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/0be/0be54d6a6baba029c0d208759c23f58c.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Civic 5D)",
+                "size": "5.75 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/113/11332c5161bb79fbe3ad051edc75da75.pdf"
+            },
+            {
+                "title": "Руководство по навигации i-SHIFT",
+                "size": "1.83 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/ccc/ccc53ebe0e37b5304e779507e768159c.pdf"
+            }
+        ]
+    },
+    {
+        "name": "ACCORD",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/accord.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Accord 2013) обновленный",
+                "size": "299.51 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/11a/11a19dd854b0f6a16335f9c323c7e9ed.pdf"
+            },
+            {
+                "title": "Регламент ТО (Accord 2009,2012) обновленный",
+                "size": "293.34 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/fba/fba604dd7c3d83f005bbd4bf110d4384.pdf"
+            },
+            {
+                "title": "Регламент ТО (Accord 2003) обновленный",
+                "size": "294.7 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/252/2523b4f6701ac9ff3fd5ccb48588ea47.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Accord 2013)",
+                "size": "17.98 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/c5b/c5b9c4e1e974e0295d3d5b90048a7004.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Accord 2011)",
+                "size": "37.84 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/26c/26c270748c753f2f5a02cfa9a28cf492.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Accord VIII)",
+                "size": "18.36 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/635/6356c48f3b429782050d0025d29af5e5.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Accord VII)",
+                "size": "6.25 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/3ee/3ee8f066d97c52daa1deea477119b997.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации для многофункционального дисплея",
+                "size": "30.26 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/195/195c82c77f4e23ec9e14917c458ecfcd.pdf"
+            }
+        ]
+    },
+    {
+        "name": "JAZZ",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/jazz.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Jazz 2011) обновленный",
+                "size": "292.35 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/322/322e64dd0d7652c9a3f3b53f7de3d4a2.pdf"
+            },
+            {
+                "title": "Регламент ТО (Jazz 2009) обновленный",
+                "size": "290.08 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/cd5/cd553baadd0afce76f8255945349f768.pdf"
+            },
+            {
+                "title": "Регламент ТО (Jazz 2003) обновленный",
+                "size": "298.82 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/2fa/2fa50e2e38c48e0ac31b794bd25985d1.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Jazz 2009)",
+                "size": "19.78 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/d8c/d8cfd2b7a54ac4eb1435d3a24cba7d6d.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Jazz 2006)",
+                "size": "6.09 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/471/47168b1693016fc72cbeb39e61dbf1c0.pdf"
+            }
+        ]
+    },
+    {
+        "name": "CROSSTOUR",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/crosstour.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Crosstour 2013) обновленный",
+                "size": "304.79 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/552/5523781086c8ba0f68c8a380bcf14d07.pdf"
+            },
+            {
+                "title": "Регламент ТО (Crosstour 2011) обновленный",
+                "size": "294.32 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/0a1/0a1f0b43e76fd8e67088934e01165da9.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Crosstour 2013)",
+                "size": "16.05 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/8d7/8d7b3cad28b74633369a3aa9d1562852.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Crosstour)",
+                "size": "11.67 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/f24/f24cec994749489aae24d1d40e44452e.pdf"
+            }
+        ]
+    },
+    {
+        "name": "LEGEND",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/legend.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Legend KB2) обновленный",
+                "size": "297.1 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/fbd/fbdff9a7fd4cf6f264d04d34ef71b79a.pdf"
+            },
+            {
+                "title": "Регламент ТО (Legend KB1) обновленный",
+                "size": "296.15 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/b2b/b2bdffeb9df22aa24e171aee488b5686.pdf"
+            },
+            {
+                "title": "Регламент ТО (Legend KA9) обновленный",
+                "size": "292.48 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/8c3/8c33859bff574c9feab467092b2cfe00.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Legend)",
+                "size": "7.51 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/4be/4be90498f08a36e02f6338b221bbf723.pdf"
+            }
+        ]
+    },
+    {
+        "name": "ACURA MDX",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/acura-mdx.png",
+        "links": [
+            {
+                "title": "Регламент ТО (MDX 2016) обновленный",
+                "size": "271.62 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/fe0/fe00dd2bc090246d7e0e232821b28e97.pdf"
+            },
+            {
+                "title": "Регламент ТО (MDX 2014) обновленный",
+                "size": "271.32 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/d42/d42bc8d29f1ecd661053beacef0650ad.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (MDX 2014)",
+                "size": "40.75 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/782/782c93dca70c26201de95dc0fc9a8e03.pdf"
+            }
+        ]
+    },
+    {
+        "name": "ACURA RDX",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/acura-rdx.png",
+        "links": [
+            {
+                "title": "Регламент ТО (RDX 2014) обновленный",
+                "size": "270.87 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/485/4852da0e439a2b50d18b0e267afdc44f.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (RDX 2014)",
+                "size": "33.46 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/83e/83e40faccf3fb9a982c7503c3d629112.pdf"
+            }
+        ]
+    },
+    {
+        "name": "ACURA TLX",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/acura-tlx.png",
+        "links": [
+            {
+                "title": "Регламент ТО (TLX 3,5 2014) обновленный",
+                "size": "273.28 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/3fd/3fdf31175e49e5f3531bab50bed9495b.pdf"
+            },
+            {
+                "title": "Регламент ТО (TLX 2,4 2014) обновленный",
+                "size": "268.89 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/09d/09d76a0acb6e576df1c8060f23f2560b.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (TLX 2014)",
+                "size": "48.26 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/cf6/cf697567f82dd09702d0312b0e76ddba.pdf"
+            }
+        ]
+    },
+    {
+        "name": "АКСЕССУАРЫ",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/acsessuar.png",
+        "links": [
+            {
+                "title": "Информация по трансмиссии i-SHIFT 5d",
+                "size": "2.22 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/422/422f72b166c1644837c5862c39fa73b4.pdf"
+            },
+            {
+                "title": "Информацию для пользователя адаптера iPod",
+                "size": "121.51 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/d47/d477269c99205027b4713a3b175b35d7.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации системы помощи при парковке (задние датчики)",
+                "size": "329.83 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/929/929146e77e6d3dba12ed3203461aa5f7.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации беспроводной bluetooth-системы громкой связи",
+                "size": "107.7 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/55a/55a824bf15a0f86bae09d2f66383d88f.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации системы помощи при парковке (передние и задние датчики)",
+                "size": "1.1 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/91a/91a4f51d43d492116a1504ce7f6eb2f9.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации навигационной системы Accord, Crosstour",
+                "size": "5.47 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/4a7/4a7af12a408e831f244e26f51879c61d.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации навигационной системы CR-V",
+                "size": "9.37 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/4c1/4c178f1c97f936811d873eeacb065046.pdf"
+            }
+        ]
+    },
+    {
+        "name": "ДРУГИЕ МОДЕЛИ",
+        "image": "https://cdn.alexsab.ru/pages/honda/docs/other.png",
+        "links": [
+            {
+                "title": "Регламент ТО (Civic Type R 2009) обновленный",
+                "size": "290.28 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/8cf/8cffb65913c21ca7b937f1bdc5ac8196.pdf"
+            },
+            {
+                "title": "Регламент ТО (Civic Type R 2007) обновленный",
+                "size": "289.93 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/d5e/d5e86fc6c40d6ccc1a6d4971387bae9f.pdf"
+            },
+            {
+                "title": "Регламент ТО (FR-V BE3) обновленный",
+                "size": "295.19 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/b97/b97c90446df70bb8e903e71e221ce0d0.pdf"
+            },
+            {
+                "title": "Регламент ТО (HR-V GH4) обновленный",
+                "size": "294.07 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/bf3/bf3a09d3bbfcc9170858c16536fe0adf.pdf"
+            },
+            {
+                "title": "Регламент ТО (S2000 AP1,AP2) обновленный",
+                "size": "288.74 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/43d/43d388bc9229f4fc68a26e99fa57549a.pdf"
+            },
+            {
+                "title": "Регламент ТО (Stream 2001 RN3) обновленный",
+                "size": "301.79 КБ",
+                "url": "https://auto.honda.ru/upload/iblock/cbd/cbd980972d8cc11cef96079da8b13a5d.pdf"
+            },
+            {
+                "title": "Руководство по эксплуатации (Stream)",
+                "size": "2.42 МБ",
+                "url": "https://auto.honda.ru/upload/iblock/9c8/9c8758a9476db81832644b9c7ff89fb9.pdf"
+            }
+        ]
+    },
+];
 ---
 
 <PageLayout
@@ -10,6 +480,26 @@ const { site_name, brand, legal_entity, legal_inn, legal_city, phone_common, ema
     description={`Руководства и регламенты ТО Honda`}
     breadcrumb={[{name:"Руководства и регламенты ТО Honda",href:""}]}
 >
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-10 pt-10">
 
+        {items.map(item => (
+            <div class="bg-gray-100 p-5">
+                <div class="relative font-bold text-xl border-b-2 xs:h-[55px] h-[80px] mb-5 pr-20">
+                    {item.name}
+                    <img src={item.image} alt={item.name} class="absolute right-0 -top-10 xs:max-w-[100px]! max-w-[145px]!">
+                </div>
+                <div class="h-[170px] relative overflow-y-auto custom-scrollbar">
+                    {
+                        item.links.map(link => (
+                            <a class="text-sm! md:text-base! mb-1.5! sm:mb-2! lg:mb-3! block" href={link.url} target="_blank" rel="noopener noreferrer">
+                                <div class="hover:underline">{link.title}</div>
+                                <div class="text-gray-400">{link.size}</div>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+        ))}
 
+    </div>
 </PageLayout>
