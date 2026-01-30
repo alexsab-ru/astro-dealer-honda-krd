@@ -1,0 +1,26 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import SpecialSalonsInfo from '@/components/SpecialSalonsInfo.astro';
+import settings from '@/data/settings.json';
+const { site_name, brand, legal_entity, legal_inn, legal_city, phone_common, email_common } = settings;
+console.log(Astro);
+
+---
+
+<PageLayout
+    h1="Срок поставки запчастей"
+    title="Срок поставки запчастей"
+    description={`Срок поставки запчастей ${brand}`}
+    breadcrumb={[{name:"Срок поставки запчастей Honda",href:""}]}
+>
+
+    <strong>Срок поставки (раб. дней)<sup>*</sup> — 2 дня</strong>
+    <br/>
+    <br/>
+    <SpecialSalonsInfo dataFormName={`Узнать подробнее. Срок поставки запчастей ${brand}`} />
+
+    <blockquote>
+        <p><sup>*</sup> обозначены сроки согласно договору поставки запасных частей на склад Дилера, при наличии запасной части на складе ООО «Хонда Мотор РУС». В данные сроки не включены: время на размещение заказа Дилером, а также обработка заказа и день его отгрузки (для регионов) со склада ООО «Хонда Мотор РУС»</p>
+    </blockquote>
+
+</PageLayout>
