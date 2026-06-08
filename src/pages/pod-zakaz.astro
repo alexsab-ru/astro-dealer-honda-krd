@@ -24,7 +24,7 @@ const steps = [
     {iconName: 'mdi:numeric-6-circle', iconClass: 'text-accent-400!', title: 'ТАМОЖЕННОЕ ОФОРМЛЕНИЕ', text: 'Подписание документов. Оплата таможенных сборов и услуг агента'},
     {iconName: 'mdi:numeric-7-circle', iconClass: 'text-accent-400!', title: 'КЛЮЧИ', text: 'Теперь вы можете забрать свой автомобиль у дилера'},
 ];
-import {AGREE_LABEL} from '@/const';
+const { agree_label } = settings;
 const { models } = modelsData;
 const modelList = models.map(model => ({id: model.id, name: model.name, thumb: model.thumb}));
 ---
@@ -131,7 +131,7 @@ const modelList = models.map(model => ({id: model.id, name: model.name, thumb: m
 							/>
 							<Checkbox
 								name="agree"
-								label={AGREE_LABEL}
+								label={agree_label}
 								color="black"
 								required
 								errorText="Чтобы продолжить, установите флажок"
