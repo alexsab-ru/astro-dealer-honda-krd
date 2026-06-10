@@ -2,13 +2,13 @@
 import settings from '@/data/site/settings.json';
 import modelsData from '@/data/site/models.json'
 import Layout from '@/layouts/Layout.astro';
-import PageH1 from '@/components/PageH1/Index.astro';
-import SectionWithBg from '@/components/SectionWithBg/SectionWithBg.astro';
-import AdvantagesList from '@/components/Advantages/List.astro';
-import AdvantagesItem from '@/components/Advantages/Item.astro';
-import Input from '@/components/Input.astro';
-import Checkbox from '@/components/Checkbox/Checkbox.astro';
-import Button from '@/components/Button/Button.astro';
+import PageH1 from '@/ui/page-h1/PageH1.astro';
+import SectionWithBg from '@/blocks/section-with-bg/SectionWithBg.astro';
+import AdvantagesList from '@/blocks/advantages/AdvantagesList.astro';
+import AdvantagesItem from '@/blocks/advantages/AdvantagesItem.astro';
+import Input from '@/ui/input/Input.astro';
+import Checkbox from '@/ui/checkbox/Checkbox.astro';
+import Button from '@/ui/button/Button.astro';
 const advantages = [ 
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: 'Белая схема:', text: 'Мы гарантируем юридическую чистоту, безопасность и прозрачность сделки. Без скрытых комиссий и навязанных услуг.'},
     {iconName: 'mdi:check-bold', iconClass: 'text-accent-500', title: 'Полный пакет:', text: 'Поиск автомобиля, общение с поставщиками, подготовку документов, прохождение экспортных процедур и доставку мы возьмем на себя.'},
